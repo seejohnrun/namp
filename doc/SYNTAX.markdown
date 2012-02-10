@@ -4,12 +4,12 @@ Here's a list of current syntax options. Notations are provided for PHP Extras s
 
 * * *
 
-PHRASE EMPHASIS
+## PHRASE EMPHASIS
 ---------------
 *italic*   **bold**  
 _italic_   __bold__
 
-LINKS
+## LINKS
 ---------------
 Inline:
 An [example](http://url.com/ "Title")
@@ -20,17 +20,17 @@ else in the doc, define the link:
 
   [id]: http://example.com/  "Title"
 
-IMAGES
+## IMAGES
 ---------------
 Inline (titles are optional):
-![alt text](/path/img.jpg "Title")
+![alt text](/path/img.jpg "Obviously, no image")
 
 Reference-style:
 ![alt text][id]
 
-  [id]: /url/to/img.jpg "Title"
+  [id]: /url/to/img.jpg "Obviously, no image"
 
-HEADERS
+## HEADERS
 ---------------
 
 Header 1
@@ -47,7 +47,7 @@ atx-style (closing #'s are optional):
 
 ###### Header 6
 
-LISTS
+## LISTS
 ---------------
 Ordered, without paragraphs:
 
@@ -73,7 +73,7 @@ You can nest them:
     3. Yellow
 *   Camel
 
-BLOCKQUOTES
+## BLOCKQUOTES
 ---------------
 > Email-style angle brackets
 > are used for blockquotes.
@@ -87,7 +87,7 @@ BLOCKQUOTES
 > * Etc.
 
 
-CODE SPANS
+## CODE SPANS
 ---------------
 `<code>` spans are delimited
 by backticks.
@@ -95,7 +95,7 @@ by backticks.
 You can include literal backticks
 like `` `this` ``.
 
-PREFORMATTED CODE BLOCKS
+## PREFORMATTED CODE BLOCKS
 ---------------
 Indent every line of a code block by at least 4 spaces or 1 tab.
 
@@ -121,7 +121,7 @@ var x = function () {
 
 Of course, you'll have to implement your own highlighter.
 
-HORIZONTAL RULES
+## HORIZONTAL RULES
 ---------------
 Three or more dashes or asterisks:
 
@@ -131,18 +131,16 @@ Three or more dashes or asterisks:
 
 - - - -
 
-MANUAL LINE BREAKS
+## MANUAL LINE BREAKS (todo)
 ---------------
 End a line with two or more spaces:
 
-Roses are red,<br/> 
+Roses are red, 
 Violets are blue.
 
 - - - - - - - - - - - - - - - - - - - -
 
-## PHP Extras
-
-Table
+## TABLES (todo)
 -----------------
 
 |a |b |c
@@ -162,33 +160,42 @@ alignment
  0001 | 2    | 003
    4  | 0005 |  6
 
-Definition list
+## DEFINITION LISTS (PHP Extras)
 -----------------
 
 term
- : definition
+: definition
 
 term
- : definition
- : is here
+: definition
+: is here
 
-term
- : definition
+term1
+term2
+: definition
 
- : can have multi-paragraph
+## ATTRIBUTES (Maruku){: #myid .myclass}
+-----------------
 
-Auto link
+Look _around_{: .class1} you! View [the source code!]{: .someclass .someclass2 vague="no"}
+This whole area is covered in
+attributes!
+{: #bigBlock tutorial=yes}
+
+Spans should be covered in `[ ]`, with the attribute list defined afterwards.
+
+## AUTO-LINK
 -----------------
 
 <http://foo.com/>  
 <mailto:foo@bar.com>
 
-Encode
+## ENCODING
 -----------------
 
 &amp; < "aaa"
 
-Inline HTML
+## INLINE HTML
 -----------------
 
 <p>
