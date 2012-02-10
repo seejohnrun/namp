@@ -119,7 +119,7 @@ var x = function () {
 };
 ```
 
-Of course, you'll have to implement your own highlighter.
+(Highlighting is enabled by default; you'll have to define your own CSS.)
 
 ## HORIZONTAL RULES
 ---------------

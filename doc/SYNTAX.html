@@ -75,11 +75,11 @@ are used for blockquotes.</p><blockquote><p>And, they can be nested.undefined&gt
 
 <hr></hr>
 
-<p><code>&lt;code&gt;</code> spans are delimited
+<p><span class="tag">&lt;<span class="title">code</span>></span> spans are delimited
 by backticks.</p>
 
 <p>You can include literal backticks
-like <code> `this` </code>.</p>
+like  <span class="string">`this`</span> .</p>
 
 <h2>PREFORMATTED CODE BLOCKS</h2>
 
@@ -89,20 +89,20 @@ like <code> `this` </code>.</p>
 
 <p>This is a normal paragraph.</p>
 
-<pre><code>This is a preformatted
-code block.</code></pre>
+<pre>This <span class="keyword">is</span> a preformatted
+code <span class="keyword">block</span>.</pre>
 
-<p>Code tags can also be &quot;fenced&quot; by <code> </code><code></code> ` (GitHub-Flavored-Markdown)</p>
+<p>Code tags can also be &quot;fenced&quot; by   ` (GitHub-Flavored-Markdown)</p>
 
-<pre><code>console.log(&quot;flock yeah!&quot;);</code></pre>
+<pre>console<span class="preprocessor">.log</span>(<span class="string">"flock yeah!"</span>)<span class="comment">;</span></pre>
 
 <p>For extra awesome, add the name of a programming language to the first fence, in order to syntax highlight it.</p>
 
-<pre class="perl" lang="perl"><code>var x = function () { 
-  console.log(&quot;This actually has &#39;perl&#39; as a tag!&quot;)
-};</code></pre>
+<pre class="perl" lang="perl">var <span class="keyword">x</span> = function () { 
+  console.<span class="keyword">log</span>(<span class="string">"This actually has 'perl' as a tag!"</span>)
+};</pre>
 
-<p>Of course, you&#39;ll have to implement your own highlighter.</p>
+<p>(Highlighting is enabled by default; you&#39;ll have to define your own CSS.)</p>
 
 <h2>HORIZONTAL RULES</h2>
 
@@ -168,7 +168,7 @@ because of the blank line preceding it.</dd></dl>
 This whole area is covered in
 attributes!</p>
 
-<p>Spans should be covered in <code>[ ]</code>, with the attribute list defined afterwards.</p>
+<p>Spans should be covered in <span class="title">[ ]</span>, with the attribute list defined afterwards.</p>
 
 <h2>AUTO-LINK</h2>
 
