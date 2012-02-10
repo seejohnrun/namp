@@ -8,7 +8,8 @@
 
 <hr></hr>
 
-<p><em>italic</em>   <strong>bold</strong><br></br><em>italic</em>   <strong>bold</strong></p>
+<p><em>italic</em>   <strong>bold</strong><br />
+<em>italic</em>   <strong>bold</strong></p>
 
 <h2>LINKS</h2>
 
@@ -18,7 +19,8 @@
 An <a href="http://url.com/" title="Title">example</a></p>
 
 <p>Reference-style labels (titles are optional):
-An <a href="/url/to/img.jpg" title="Obviously, no image">example</a>. Then, anywhere<br></br>else in the doc, define the link:</p>
+An <a href="/url/to/img.jpg" title="Obviously, no image">example</a>. Then, anywhere<br />
+else in the doc, define the link:</p>
 
 <h2>IMAGES</h2>
 
@@ -96,7 +98,7 @@ code block.</code></pre>
 
 <p>For extra awesome, add the name of a programming language to the first fence, in order to syntax highlight it.</p>
 
-<pre class="perl"><code>var x = function () { 
+<pre class="perl" lang="perl"><code>var x = function () { 
   console.log(&quot;This actually has &#39;perl&#39; as a tag!&quot;)
 };</code></pre>
 
@@ -120,7 +122,7 @@ code block.</code></pre>
 
 <p>End a line with two or more spaces:</p>
 
-<p>Roses are red, 
+<p>Roses are red,<br />
 Violets are blue.</p>
 
 <hr></hr>
@@ -150,21 +152,30 @@ Violets are blue.</p>
 
 <hr></hr>
 
-<dl><dt>term</dt><dd>definition</dd><dt>term</dt><dd>definition</dd><dd>is here</dd><dt>term1</dt><dt>term2</dt><dd>definition</dd></dl>
+<dl><dt>Apple</dt><dd>Pomaceous fruit of plants of the genus Malus in 
+the family Rosaceae.</dd><dt>Orange</dt><dd>The fruit of an evergreen tree of the genus Citrus.</dd><dt>Pomegranate</dt><dd>A deciduous shrub or small tree (Punica granatum),
+native to Asia and <em>widely cultivated</em> for its edible fruit. Anyway,
+Blah blah blah.adsadsasd</dd><dt>Term 1</dt><dd>This is a definition with two paragraphs. Lorem ipsum 
+dolor sit amet, consectetuer adipiscing elit. Aliquam 
+    hendrerit mi posuere lectus.</dd><dd>Second definition for term 1, also wrapped in a paragraph
+because of the blank line preceding it.</dd></dl>
 
-<h2>ATTRIBUTES (Maruku){: #myid .myclass}</h2>
+<h2>ATTRIBUTES (Maruku) {: #myid .myclass}</h2>
 
 <hr></hr>
 
-<p id="bigBlock" tutorial="yes">Look <em class="class1">around</em> you! View <span class="someclass someclass2" vague="no">the source code!</span>
+<p id="bigBlock" tutorial="yes">Look <em class="class1">around</em> you! View [the source code!]
 This whole area is covered in
 attributes!</p>
+
+<p>Spans should be covered in <code>[ ]</code>, with the attribute list defined afterwards.</p>
 
 <h2>AUTO-LINK</h2>
 
 <hr></hr>
 
-<p><a href="http://foo.com/">http://foo.com/</a><br></br><a href="mailto:foo@bar.com">foo@bar.com</a></p>
+<p><a href="http://foo.com/">http://foo.com/</a><br />
+<a href="mailto:foo@bar.com">foo@bar.com</a></p>
 
 <h2>ENCODING</h2>
 

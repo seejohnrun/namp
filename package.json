@@ -51,5 +51,8 @@
   "main" : "./lib/index.js",
   "bin": {
     "namp": "./bin/namp.js"
+  },
+  "dependencies": {
+    "highlight.js": "1.0.4",
   }
 }

@@ -7,7 +7,7 @@ var input = fs.readFile("SYNTAX.markdown", "utf8", function (err, data) {
 		process.exit(1);
 	}
 
-	var output = require("../lib/index").parse( data, "all" );
+	var output = require("../lib/index").parse( data, "GFM", true );
 
 	fs.writeFile("SYNTAX.html", output);
 });

@@ -135,7 +135,7 @@ Three or more dashes or asterisks:
 ---------------
 End a line with two or more spaces:
 
-Roses are red, 
+Roses are red,  
 Violets are blue.
 
 - - - - - - - - - - - - - - - - - - - -
@@ -163,18 +163,26 @@ alignment
 ## DEFINITION LISTS (PHP Extras)
 -----------------
 
-term
-: definition
+Apple
+:   Pomaceous fruit of plants of the genus Malus in 
+    the family Rosaceae.
 
-term
-: definition
-: is here
+Orange
+:   The fruit of an evergreen tree of the genus Citrus.
 
-term1
-term2
-: definition
+Pomegranate
+:   A deciduous shrub or small tree (Punica granatum),
+native to Asia and _widely cultivated_ for its edible fruit. Anyway,
+  Blah blah blah.adsadsasd
 
-## ATTRIBUTES (Maruku){: #myid .myclass}
+Term 1
+:   This is a definition with two paragraphs. Lorem ipsum 
+    dolor sit amet, consectetuer adipiscing elit. Aliquam 
+    hendrerit mi posuere lectus.
+:   Second definition for term 1, also wrapped in a paragraph
+    because of the blank line preceding it.
+
+## ATTRIBUTES (Maruku) {: #myid .myclass}
 -----------------
 
 Look _around_{: .class1} you! View [the source code!]{: .someclass .someclass2 vague="no"}
