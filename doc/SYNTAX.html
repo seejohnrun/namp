@@ -1,0 +1,166 @@
+<h1>Available syntax</h1>
+
+<p>Here&#39;s a list of current syntax options. Notations are provided for PHP Extras syntax, and Maruku syntax. Unless otherwise noted, every other notation is from Gruber&#39;s original Markdown.</p>
+
+<hr></hr>
+
+<h2>PHRASE EMPHASIS</h2>
+
+<p><em>italic</em>   <strong>bold</strong><br></br><em>italic</em>   <strong>bold</strong></p>
+
+<h2>LINKS</h2>
+
+<p>Inline:
+An <a href="http://url.com/" title="Title">example</a></p>
+
+<p>Reference-style labels (titles are optional):
+An <a href="/url/to/img.jpg" title="Title">example</a>. Then, anywhere<br></br>else in the doc, define the link:</p>
+
+<h2>IMAGES</h2>
+
+<p>Inline (titles are optional):
+<img alt="alt text" title="Title" src="/path/img.jpg"></img></p>
+
+<p>Reference-style:
+<img_ref alt="alt text" ref="id" text="![alt text][id]"></img_ref></p>
+
+<h2>HEADERS</h2>
+
+<h1>Header 1</h1>
+
+<h2>Header 2</h2>
+
+<p>atx-style (closing #&#39;s are optional):</p>
+
+<h1>Header 1</h1>
+
+<h2>Header 2</h2>
+
+<h6>Header 6</h6>
+
+<h2>LISTS</h2>
+
+<p>Ordered, without paragraphs:</p>
+
+<ol><li>Foo</li><li>Bar</li></ol>
+
+<p>Unordered, with paragraphs:</p>
+
+<ul><li><p>A list item.</p><p>With multiple paragraphs.</p></li><li><p>Bar</p></li></ul>
+
+<p>You can nest them:</p>
+
+<ul><li>Abacus<ul><li>A tool</li></ul></li><li>Banana<ol><li>Fruit</li><li>Gorilla snack<ul><li>(or monkeys)</li></ul></li><li>Yellow</li></ol></li><li>Camel</li></ul>
+
+<h2>BLOCKQUOTES</h2>
+
+<blockquote><p>Email-style angle brackets
+are used for blockquotes.</p><blockquote><p>And, they can be nested.undefined&gt; #### Headers in blockquotes</p></blockquote><ul><li>You can quote a list.</li><li>Etc.</li></ul></blockquote>
+
+<h2>CODE SPANS</h2>
+
+<p><code>&lt;code&gt;</code> spans are delimited
+by backticks.</p>
+
+<p>You can include literal backticks
+like <code> `this` </code>.</p>
+
+<h2>PREFORMATTED CODE BLOCKS</h2>
+
+<p>Indent every line of a code block by at least 4 spaces or 1 tab.</p>
+
+<p>This is a normal paragraph.</p>
+
+<pre><code>This is a preformatted
+code block.</code></pre>
+
+<p>Code tags can also be &quot;fenced&quot; by <code> </code><code></code> ` (GitHub-Flavored-Markdown)</p>
+
+<pre><code>console.log(&quot;flock yeah!&quot;);</code></pre>
+
+<p>For extra awesome, add the name of a programming language to the first fence, in order to syntax highlight it.</p>
+
+<pre class="perl"><code>var x = function () { 
+  console.log(&quot;This actually has &#39;perl&#39; as a tag!&quot;)
+};</code></pre>
+
+<p>Of course, you&#39;ll have to implement your own highlighter.</p>
+
+<h2>HORIZONTAL RULES</h2>
+
+<p>Three or more dashes or asterisks:</p>
+
+<hr></hr>
+
+<hr></hr>
+
+<hr></hr>
+
+<h2>MANUAL LINE BREAKS</h2>
+
+<p>End a line with two or more spaces:</p>
+
+<p>Roses are red,&lt;br/&gt; 
+Violets are blue.</p>
+
+<hr></hr>
+
+<h2>PHP Extras</h2>
+
+<h2>Table</h2>
+
+<p>|a |b |c
+|--|--|--
+|1 |2 |3</p>
+
+<p>or</p>
+
+<p>a |b |c
+--|--|--
+1 |2 |3</p>
+
+<p>alignment</p>
+
+<p>  right|left  | center
+-----:|:-----|------
+ 0001 | 2    | 003
+   4  | 0005 |  6</p>
+
+<h2>Definition list</h2>
+
+<p>term
+ : definition</p>
+
+<p>term
+ : definition
+ : is here</p>
+
+<p>term
+ : definition</p>
+
+<p> : can have multi-paragraph</p>
+
+<h2>Auto link</h2>
+
+<p><a href="http://foo.com/">http://foo.com/</a><br></br><a href="mailto:foo@bar.com">foo@bar.com</a></p>
+
+<h2>Encode</h2>
+
+<p>&amp;amp; &lt; &quot;aaa&quot;</p>
+
+<h2>Inline HTML</h2>
+
+<p>
+HTML is represented as is.<br>
+<del>The <strong>quick brown fox</strong> jumps over the lazy dog.</del>
+</p>
+
+<div>
+Regularly Markdown syntax ignored in HTML.<br/>
+[Google](http://www.google.co.jp/)
+</div>
+
+<div markdown="1">
+Markdown enabled inside HTML when marked by markdown="1" attribute.  
+[Google](http://www.google.co.jp/)
+</div>

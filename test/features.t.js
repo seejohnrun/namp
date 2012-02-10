@@ -50,7 +50,8 @@ function test_dialect( dialect, features ) {
 // Bootstrap code
 if ( typeof process != "undefined" && process.title == "node" ) {
   // Setup for node
-  var test = require( 'patr/runner' ),
+  console.log("ASD");
+  var test = require( 'patr' ),
       asserts = require( 'assert' ),
       n_fs = require( 'fs' ),
       args = process.argv.splice( 1 ),

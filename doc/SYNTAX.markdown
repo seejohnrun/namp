@@ -1,0 +1,207 @@
+# Available syntax
+
+Here's a list of current syntax options. Notations are provided for PHP Extras syntax, and Maruku syntax. Unless otherwise noted, every other notation is from Gruber's original Markdown.
+
+* * *
+
+PHRASE EMPHASIS
+---------------
+*italic*   **bold**  
+_italic_   __bold__
+
+LINKS
+---------------
+Inline:
+An [example](http://url.com/ "Title")
+
+Reference-style labels (titles are optional):
+An [example][id]. Then, anywhere  
+else in the doc, define the link:
+
+  [id]: http://example.com/  "Title"
+
+IMAGES
+---------------
+Inline (titles are optional):
+![alt text](/path/img.jpg "Title")
+
+Reference-style:
+![alt text][id]
+
+  [id]: /url/to/img.jpg "Title"
+
+HEADERS
+---------------
+
+Header 1
+========
+
+Header 2
+--------
+
+atx-style (closing #'s are optional):
+
+# Header 1 #
+
+## Header 2 ##
+
+###### Header 6
+
+LISTS
+---------------
+Ordered, without paragraphs:
+
+1.  Foo
+2.  Bar
+
+Unordered, with paragraphs:
+
+*   A list item.
+
+    With multiple paragraphs.
+
+*   Bar
+
+You can nest them:
+
+*   Abacus
+    * A tool
+*   Banana
+    1.  Fruit
+    2.  Gorilla snack
+        * (or monkeys)
+    3. Yellow
+*   Camel
+
+BLOCKQUOTES
+---------------
+> Email-style angle brackets
+> are used for blockquotes.
+
+> > And, they can be nested.
+
+
+> #### Headers in blockquotes
+> 
+> * You can quote a list.
+> * Etc.
+
+
+CODE SPANS
+---------------
+`<code>` spans are delimited
+by backticks.
+
+You can include literal backticks
+like `` `this` ``.
+
+PREFORMATTED CODE BLOCKS
+---------------
+Indent every line of a code block by at least 4 spaces or 1 tab.
+
+This is a normal paragraph.
+
+    This is a preformatted
+    code block.
+
+
+Code tags can also be "fenced" by ` ``` ` (GitHub-Flavored-Markdown)
+
+```
+console.log("flock yeah!");
+```
+
+For extra awesome, add the name of a programming language to the first fence, in order to syntax highlight it.
+
+```perl
+var x = function () { 
+  console.log("This actually has 'perl' as a tag!")
+};
+```
+
+Of course, you'll have to implement your own highlighter.
+
+HORIZONTAL RULES
+---------------
+Three or more dashes or asterisks:
+
+---
+
+* * *
+
+- - - -
+
+MANUAL LINE BREAKS
+---------------
+End a line with two or more spaces:
+
+Roses are red,<br/> 
+Violets are blue.
+
+- - - - - - - - - - - - - - - - - - - -
+
+## PHP Extras
+
+Table
+-----------------
+
+|a |b |c
+|--|--|--
+|1 |2 |3
+
+or
+
+a |b |c
+--|--|--
+1 |2 |3
+
+alignment
+
+  right|left  | center
+-----:|:-----|------
+ 0001 | 2    | 003
+   4  | 0005 |  6
+
+Definition list
+-----------------
+
+term
+ : definition
+
+term
+ : definition
+ : is here
+
+term
+ : definition
+
+ : can have multi-paragraph
+
+Auto link
+-----------------
+
+<http://foo.com/>  
+<mailto:foo@bar.com>
+
+Encode
+-----------------
+
+&amp; < "aaa"
+
+Inline HTML
+-----------------
+
+<p>
+HTML is represented as is.<br>
+<del>The <strong>quick brown fox</strong> jumps over the lazy dog.</del>
+</p>
+
+<div>
+Regularly Markdown syntax ignored in HTML.<br/>
+[Google](http://www.google.co.jp/)
+</div>
+
+<div markdown="1">
+Markdown enabled inside HTML when marked by markdown="1" attribute.  
+[Google](http://www.google.co.jp/)
+</div>
