@@ -121,6 +121,11 @@ var x = function () {
 
 (Highlighting is enabled by default; you'll have to define your own CSS.)
 
+## Strikethrough
+
+Hey, this ~~sucks~~ is great!
+
+
 ## HORIZONTAL RULES
 ---------------
 Three or more dashes or asterisks:
