@@ -136,7 +136,7 @@ Three or more dashes or asterisks:
 
 - - - -
 
-## MANUAL LINE BREAKS (todo)
+## MANUAL LINE BREAKS
 ---------------
 End a line with two or more spaces:
 
