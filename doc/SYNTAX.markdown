@@ -210,9 +210,11 @@ Spans should be covered in `[ ]`, with the attribute list defined afterwards.
 
 ## Boostrap tags
 
-Note: This should be wrapped in a div that looks like this: `<div class='alert-message block-message warning'>`. 
+Note: This should be wrapped in a div that looks like this: `<div class='alert alert-success'>`. 
 
-Warning: And _this_ should be wrapped in a div like this: `<div class='alert-message block-message error'>`
+Tip: This should be wrapped in a div that looks like this: `<div class='alert alert-info'>`
+
+Warning: And _this_ should be wrapped in a div like this: `<div class='alert alert-block'>`
 
 These classes have to do with Twitter Bootstrap stylings.
 
