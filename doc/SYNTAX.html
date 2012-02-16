@@ -75,11 +75,11 @@ are used for blockquotes.</p><blockquote><p>And, they can be nested.undefined&gt
 
 <hr></hr>
 
-<p><span class="tag">&lt;<span class="title">code</span>></span> spans are delimited
+<p><code>&lt;code&gt;</code> spans are delimited
 by backticks.</p>
 
 <p>You can include literal backticks
-like  <span class="string">`this`</span> .</p>
+like <code> `this` </code>.</p>
 
 <h2>PREFORMATTED CODE BLOCKS</h2>
 
@@ -92,7 +92,7 @@ like  <span class="string">`this`</span> .</p>
 <pre>This <span class="keyword">is</span> a preformatted
 code <span class="keyword">block</span>.</pre>
 
-<p>Code tags can also be &quot;fenced&quot; by   ` (GitHub-Flavored-Markdown)</p>
+<p>Code tags can also be &quot;fenced&quot; by <code> </code><code></code> ` (GitHub-Flavored-Markdown)</p>
 
 <pre>console<span class="preprocessor">.log</span>(<span class="string">"flock yeah!"</span>)<span class="comment">;</span></pre>
 
@@ -106,7 +106,7 @@ code <span class="keyword">block</span>.</pre>
 
 <h2>Strikethrough</h2>
 
-<p>Hey, this <del>sucks</del> is great!</p>
+<p>Hey, this is <del>terrible</del> great!</p>
 
 <h2>HORIZONTAL RULES</h2>
 
@@ -120,7 +120,7 @@ code <span class="keyword">block</span>.</pre>
 
 <hr></hr>
 
-<h2>MANUAL LINE BREAKS (todo)</h2>
+<h2>MANUAL LINE BREAKS</h2>
 
 <hr></hr>
 
@@ -172,7 +172,7 @@ because of the blank line preceding it.</dd></dl>
 This whole area is covered in
 attributes!</p>
 
-<p>Spans should be covered in <span class="title">[ ]</span>, with the attribute list defined afterwards.</p>
+<p>Spans should be covered in <code>[ ]</code>, with the attribute list defined afterwards.</p>
 
 <h2>AUTO-LINK</h2>
 
@@ -186,6 +186,14 @@ attributes!</p>
 <hr></hr>
 
 <p>&amp;amp; &lt; &quot;aaa&quot;</p>
+
+<h2>Boostrap tags</h2>
+
+<div class="alert-message block-message warning"><div>This should be wrapped in a div that looks like this: <code>&lt;div class=&#39;alert-message block-message warning&#39;&gt;</code>. </div></div>
+
+<div class="alert-message block-message error"><div>And <em>this</em> should be wrapped in a div like this: <code>&lt;div class=&#39;alert-message block-message error&#39;&gt;</code></div></div>
+
+<p>These classes have to do with Twitter Bootstrap stylings.</p>
 
 <h2>INLINE HTML</h2>
 

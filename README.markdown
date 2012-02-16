@@ -1,90 +1,26 @@
-markdown-js
-===========
+This is not another markdown parser.
 
-Yet another markdown parser, this time for JavaScript. There's a few
-options that precede this project but they all treat markdown to HTML
-conversion as a single step process. You pass markdown in and get HTML
-out, end of story. We had some pretty particular views on how the
-process should actually look, which include:
+Well, okay, yes it is. But it handles a lot more than you're probably used to. This generator can process Markdown files written in:
 
-  * producing well-formed HTML. This means that em and strong nesting is
-    important, as is the ability to output as both HTML and XHTML
+* [The standard Gruber syntax](http://daringfireball.net/projects/markdown/)
+* [The GitHub Flavored Markdown syntax](http://github.github.com/github-flavored-markdown/)
+* [The PHP Markdown Extra syntax](http://michelf.com/projects/php-markdown/extra/)
+* [Maruku meta-data support](http://maruku.rubyforge.org/maruku.html#meta)
 
-  * having an intermediate representation to allow processing of parsed
-    data (we in fact have two, both [JsonML]: a markdown tree and an
-    HTML tree)
+It also does some "non-traditional" work, too, that I find pretty damn useful:
 
-  * being easily extensible to add new dialects without having to
-    rewrite the entire parsing mechanics
+* Support for [content references (conrefs) in Markdown](https://github.com/gjtorikian/markdown_conrefs). Disabled by default, see below for configuration instructions.
+* _Inline_ metadata support (something Maruku does not do). By this I mean you can add an ID to anything; for example, this format:
+    Here is [a very special]{: #special .words1 .class1 lie=false} piece of text!
 
-  * having a good test suite. The only test suites we could find tested
-    massive blocks of input, and passing depended on outputting the HTML
-    with exactly the same whitespace as the original implementation
+Produces this text:
+    <p>Here is <span id="special" class="words1 class1" lie="false">a very special</span> piece of text
 
-[JsonML]: http://jsonml.org/ "JSON Markup Language"
+Maruku only allowed you to do inline IDs for stylized text, like `code`, **strong**, or _emphasis_. Now, if you wrap your text in `[ ]` brackets, you can continue to add Maruku metadata syntax and expect it to work.
+* Strikethroughs, using `~~`. For example, `This is a ~~strikethrough~~` turns into `This is a <del>strikethrough</del>`
+* Conversion of `Note: ` and `Warning: ` blocks into [Twitter Bootstrap alert blocks](http://twitter.github.com/bootstrap/components.html#alerts). Awesome!
+* Build-time highlighting of `<pre>` code blocks. Enabled by default, see below for configuration instructions.
 
-## Installation
+Holy cow, that's a lot! Unfortunately, due to the quantity of these rules, this turns out to be one of the slowest Markdown processers for Node.js. For 1,000 files, it takes about two seconds; for 10,000, it takes about twenty. There's more information on running these benchmarks below. If you're looking for a quicker parser, try [marked](https://github.com/chjj/marked); or, perhaps, you'd prefer [the original project Namp was forked from](https://github.com/evilstreak/markdown-js), which contains all the parsers above, not including my add-ons.
 
-Just the `markdown` library:
-
-    npm install markdown
-
-Also install `md2html` to `/usr/local/bin` (or wherever)
-
-    npm install -g markdown
-
-## Usage
-
-The simple way to use it with CommonJS is:
-
-    var input = "# Heading\n\nParagraph";
-    var output = require( "markdown" ).markdown.toHTML( input );
-    print( output );
-
-If you want more control check out the documentation in
-[lib/markdown.js] which details all the methods and parameters
-available (including examples!). One day we'll get the docs generated
-and hosted somewhere for nicer browsing.
-
-We're yet to try it out in a browser, though it's high up on our list of
-things to sort out for this project.
-
-### md2html
-
-    md2html /path/to/doc.md > /path/to/doc.html
-
-[lib/markdown.js]: http://github.com/evilstreak/markdown-js/blob/master/lib/markdown.js
-
-## Intermediate Representation
-
-Internally the process to convert a chunk of markdown into a chunk of
-HTML has three steps:
-
- 1. Parse the markdown into a JsonML tree. Any references found in the
-    parsing are stored in the attribute hash of the root node under the
-    key `references`.
-
- 2. Convert the markdown tree into an HTML tree. Rename any nodes that
-    need it (`bulletlist` to `ul` for example) and lookup any references
-    used by links or images. Remove the references attribute once done.
-
- 3. Stringify the HTML tree being careful not to wreck whitespace where
-    whitespace is important (surrounding inline elements for example).
-
-Each step of this process can be called individually if you need to do
-some processing or modification of the data at an intermediate stage.
-For example, you may want to grab a list of all URLs linked to in the
-document before rendering it to HTML which you could do by recursing
-through the HTML tree looking for `a` nodes.
-
-## Running tests
-
-To run the tests under node you will need [patr] installed, then do
-
-    $ NODE_PATH=lib node test/features.t.js
-
-[patr]: http://github.com/kriszyp/patr
-
-## License
-
-Released under the MIT license.
+Note: for a demonstration of all these syntaxes, take a look at the _/doc_ folder.

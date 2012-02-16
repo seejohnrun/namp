@@ -123,7 +123,7 @@ var x = function () {
 
 ## Strikethrough
 
-Hey, this ~~sucks~~ is great!
+Hey, this is ~~terrible~~ great!
 
 
 ## HORIZONTAL RULES
@@ -207,6 +207,14 @@ Spans should be covered in `[ ]`, with the attribute list defined afterwards.
 -----------------
 
 &amp; < "aaa"
+
+## Boostrap tags
+
+Note: This should be wrapped in a div that looks like this: `<div class='alert-message block-message warning'>`. 
+
+Warning: And _this_ should be wrapped in a div like this: `<div class='alert-message block-message error'>`
+
+These classes have to do with Twitter Bootstrap stylings.
 
 ## INLINE HTML
 -----------------
