@@ -42,7 +42,13 @@ main:
     file = files[filename];
 
     try {
-      text = namp.toHTML(file.text, "NAMP", true).replace(/\s/g, '');
+      text = namp.toHTML(file.text, "NAMP", {highlight: false });
+
+      if (Array.isArray(text))
+        text = text[0];
+
+      text = text.replace(/\s/g, '');
+      
       html = file.html.replace(/\s/g, '');
     } catch(e) {
       console.log('%s failed.', filename);
@@ -148,8 +154,13 @@ var bench = function() {
   });
 
   var namp = require('../lib/index');
-  main.bench('namp', function(text) {
-    namp.toHTML(text, "NAMP", true);
+  main.bench('namp (with all options disabled)', function(text) {
+    namp.toHTML(text, "NAMP", {highlight: false, conref: false});
+  });
+
+  var namp = require('../lib/index');
+  main.bench('namp (with all options enabled)', function(text) {
+    namp.toHTML(text, "NAMP", {highlight: true, conref: true});
   });
 };
 

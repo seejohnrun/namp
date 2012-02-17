@@ -18,7 +18,6 @@
 
     md = data.toString('utf8');
     html = markdown.toHTML(md);
-    console.log(html);
   }
 
   if (!fullpath) {
