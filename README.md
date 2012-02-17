@@ -50,10 +50,10 @@ var input = fs.readFile("SYNTAX.md", "utf8", function (err, data) {
 	fs.writeFile("SYNTAX.html", output[0]);
 });
 
-That's it! Notice that the converter, `toHTML()`, takes two parameters:
+That's it! Notice that the converter, `toHTML()`, takes three parameters:
 
 1. `data`, the contents of the Markdown file
-2. `options`, an object containing the following properties:  
+3. `options`, an object containing the following properties:  
   - `highlight` enables build-time syntax highlighting for code blocks (this is `true` by default)
   - `conref` enables conref processing and replacing (this is `false` by default)
 

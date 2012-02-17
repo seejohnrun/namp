@@ -7,7 +7,7 @@ var input = fs.readFile("SYNTAX.md", "utf8", function (err, data) {
 		process.exit(1);
 	}
 
-	var output = require("../lib/index").toHTML( data, "NAMP", {highlight: true, conref: false} );
+	var output = require("../lib/index").toHTML( data, {highlight: true, conref: false} );
 
 	fs.writeFile("SYNTAX.html", output[0]);
 

@@ -42,7 +42,7 @@ main:
     file = files[filename];
 
     try {
-      text = namp.toHTML(file.text, "NAMP", {highlight: false });
+      text = namp.toHTML(file.text, {highlight: false });
 
       if (Array.isArray(text))
         text = text[0];
@@ -155,12 +155,12 @@ var bench = function() {
 
   var namp = require('../lib/index');
   main.bench('namp (with all options disabled)', function(text) {
-    namp.toHTML(text, "NAMP", {highlight: false, conref: false});
+    namp.toHTML(text, {highlight: false, conref: false});
   });
 
   var namp = require('../lib/index');
   main.bench('namp (with all options enabled)', function(text) {
-    namp.toHTML(text, "NAMP", {highlight: true, conref: true});
+    namp.toHTML(text, {highlight: true, conref: true});
   });
 };
 
