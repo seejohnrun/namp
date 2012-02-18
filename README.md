@@ -54,9 +54,9 @@ var input = fs.readFile("SYNTAX.md", "utf8", function (err, data) {
 That's it! Notice that the converter, `toHTML()`, takes two parameters:
 
 * `data`, the contents of the Markdown file
-* `options`, an object containing the following properties:  
-  - `highlight` enables build-time syntax highlighting for code blocks (this is `true` by default). This uses [the highlight.js processor](http://softwaremaniacs.org/soft/highlight/en/), so you'll still need to define your own CSS for colors
-  - `conref` enables conref processing and replacing (this is `false` by default)
+* `options`, an optional object containing the following properties:  
+  - `highlight` enables build-time syntax highlighting for code blocks (`true` by default). This uses [the highlight.js processor](http://softwaremaniacs.org/soft/highlight/en/), so you'll still need to define your own CSS for colors
+  - `conref` enables conref processing and replacing (`false` by default)
 
 The result of the `toHTML()` method is an object with two properties:
 
