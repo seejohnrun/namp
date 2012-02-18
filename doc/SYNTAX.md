@@ -4,7 +4,7 @@ Date: AD 1999, Day of Lavos
 
 # Available Syntax
 
-Here's a [list of current syntax options]{: #currSyn .testClass}. Notations are provided for PHP Extras syntax, Maruku syntax, GFM, and NAMP dialects.
+Here's a list of current syntax options. Notations are provided for PHP Extras syntax, Maruku syntax, GFM, and NAMP dialects.
 
 * * *
 
@@ -239,8 +239,3 @@ Regularly Markdown syntax ignored in HTML.<br/>
 Markdown enabled inside HTML when marked by markdown="1" attribute.  
 [Google](http://www.google.co.jp/)
 </div>
-
-
-## FIN
------------------
-Well, that was the {:currSyn}! By the way, did you notice this was a conref?

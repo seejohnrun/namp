@@ -43,7 +43,7 @@ main:
     file = files[filename];
 
     try { 
-      text = namp.toHTML(file.file, { highlight: true }).html;
+      text = namp.toHTML(file.text, { highlight: true }).html;
 
       text = text.replace(/\s/g, '');
       
@@ -153,12 +153,12 @@ var bench = function() {
 
   var namp = require('../lib/index');
   main.bench('namp (with all options disabled)', function(text) {
-    namp.toHTML(text, {highlight: false, conref: false});
+    namp.toHTML(text, {highlight: false });
   });
 
   var namp = require('../lib/index');
   main.bench('namp (with all options enabled)', function(text) {
-    namp.toHTML(text, {highlight: true, conref: true});
+    namp.toHTML(text, {highlight: true });
   });
 };
 

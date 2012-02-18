@@ -11,7 +11,6 @@ Well, okay, yes it is. But it handles a lot more than you're probably used to fi
 
 It also does some "non-traditional" work, too, that I find pretty damn useful:
 
-* Support for [content references (conrefs) in Markdown](https://github.com/gjtorikian/markdown_conrefs). Disabled by default, see below for configuration instructions.
 * _Inline_ metadata support (something Maruku does not do). By this I mean you can add an ID to anything; for example, this format:  
  `Here is [a very special]{: #special .words1 .class1 lie=false} piece of text!`  
 Produces this text:  
@@ -38,16 +37,13 @@ Then, add the module via a `require()` statement, feed it a file, and let it go:
 var namp = require('namp');
 var fs = require('fs');
 
-var input = fs.readFile("SYNTAX.md", "utf8", function (err, data) {
-	if (err)
-	{
-		console.err(err);
-		process.exit(1);
+fs.readFile("SYNTAX.md", "utf8", function (err, data) {
+	if (!err) {
+		var output = namp.toHTML(data, {highlight: true } );
+		fs.writeFileSync("SYNTAX.html", output.html);
+
+		console.log("Finished! By the way, I found this metadata:\n" + require('util').inspect(output.metadata));
 	}
-
-	var output = namp.toHTML( data, {highlight: true, conref: false} );
-
-	fs.writeFile("SYNTAX.html", output.html);
 });
 ```
 
@@ -56,12 +52,11 @@ That's it! Notice that the converter, `toHTML()`, takes two parameters:
 * `data`, the contents of the Markdown file
 * `options`, an object containing the following properties:  
   - `highlight` enables build-time syntax highlighting for code blocks (this is `true` by default). This uses [the highlight.js processor](http://softwaremaniacs.org/soft/highlight/en/), so you'll still need to define your own CSS for colors
-  - `conref` enables conref processing and replacing (this is `false` by default)
 
 The result of the `toHTML()` method is an object with two properties:
 
 * `html`, the transformed HTML
-* `metadata`, an object containing the document metadata values
+* `metadata`, an object containing the document metadata values (`undefined` if there's none)
 
 ## Document Metadata Handling
 
@@ -71,7 +66,7 @@ A special note must be made for the way document metadata blocks are handled. Th
 
 Surprisingly, the _test_ folder contains various functional tests for namp. These are mostly pilfered from `marked`, with some additional tests to support the namp addons. To run the suite, execute the following on the commandline:
 
-	node test/test.js
+	node test/index.js
 
 If you're interested in seeing some bench marks, run
 
