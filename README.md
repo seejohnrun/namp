@@ -47,23 +47,25 @@ var input = fs.readFile("SYNTAX.md", "utf8", function (err, data) {
 
 	var output = namp.toHTML( data, {highlight: true, conref: false} );
 
-	fs.writeFile("SYNTAX.html", output[0]);
+	fs.writeFile("SYNTAX.html", output.html);
 });
+```
 
-That's it! Notice that the converter, `toHTML()`, takes three parameters:
+That's it! Notice that the converter, `toHTML()`, takes two parameters:
 
-1. `data`, the contents of the Markdown file
-3. `options`, an object containing the following properties:  
-  - `highlight` enables build-time syntax highlighting for code blocks (this is `true` by default)
+* `data`, the contents of the Markdown file
+* `options`, an object containing the following properties:  
+  - `highlight` enables build-time syntax highlighting for code blocks (this is `true` by default). This uses [the highlight.js processor](http://softwaremaniacs.org/soft/highlight/en/), so you'll still need to define your own CSS for colors
   - `conref` enables conref processing and replacing (this is `false` by default)
+
+The result of the `toHTML()` method is an object with two properties:
+
+* `html`, the transformed HTML
+* `metadata`, an object containing the document metadata values
 
 ## Document Metadata Handling
 
-A special note must be made for the way document metadata blocks are handled. These are a list of arbitrary `Key: Value` mappings defined at the very start of a document. They are optional, but can be useful as content to be used in other locations.
-
-If you have document metadata blocks defined, the `toHTML()` function returns an array: index 0 is the transformed HTML content, and index 1 is a JSON object matching the key-properties to their values.
-
-If there is no document metadata block, then `toHTML()` simply return the HTML--not as an array, but just the content itself.
+A special note must be made for the way document metadata blocks are handled. These are a list of arbitrary `Key: Value` mappings defined at the very start of a document. They are optional, but can be useful as content to be used in other locations. _doc/SYNTAX.md_ shows how you can define these properties.
 
 ## Tests and Benchmarks
 

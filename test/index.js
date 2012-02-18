@@ -18,6 +18,7 @@ var load = function() {
   for (var i = 0; i < list.length; i++) {
     var file = list[i];
     files[path.basename(file)] = {
+      file: file,
       text: fs.readFileSync(file, 'utf8'),
       html: fs.readFileSync(file.replace(/[^.]+$/, 'html'), 'utf8')
     };
@@ -41,11 +42,8 @@ main:
     filename = keys[i_];
     file = files[filename];
 
-    try {
-      text = namp.toHTML(file.text, {highlight: false });
-
-      if (Array.isArray(text))
-        text = text[0];
+    try { 
+      text = namp.toHTML(file.file, { highlight: true }).html;
 
       text = text.replace(/\s/g, '');
       
@@ -60,12 +58,12 @@ main:
 
     for (; i < l; i++) {
       if (text[i] !== html[i]) {
-        text = text.substring(
+        /*text = text.substring(
           Math.max(i - 30, 0),
           Math.min(i + 30, text.length));
         html = html.substring(
           Math.max(i - 30, 0),
-          Math.min(i + 30, html.length));
+          Math.min(i + 30, html.length));*/
         console.log(
           '\n#%d. %s failed at offset %d. Near: "%s".\n',
           i_ + 1, filename, i, text);

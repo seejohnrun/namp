@@ -1,0 +1,177 @@
+#1. contains_code.text completed.
+#2. lazy_wrapping.text completed.
+#3. leading_paras.text completed.
+#4. nested.text completed.
+#5. simple.text completed.
+#6. spaceless.text completed.
+#7. blank_lines.text completed.
+#8. block.text completed.
+#9. embedded_backtick.text completed.
+#10. horizontal_rules.text completed.
+#11. inline.text completed.
+#12. inline_multiline.text completed.
+#13. trailing_para.text completed.
+[ '[esting]{: id=testingSuffix}',
+  'esting',
+  'id=testingSuffix',
+  index: 0,
+  input: '[esting]{: id=testingSuffix}.' ]
+[ '[I don\'t want to have to rewrite this.]{: class=class1 class2 }',
+  'I don\'t want to have to rewrite this.',
+  'class=class1 class2 ',
+  index: 0,
+  input: '[I don\'t want to have to rewrite this.]{: class=class1 class2 } Frau foo foo. **A RELIEF**{: key=value  foo=bar}. Have you ever seen [my website?](www.github.com) ?' ]
+
+#14. goldFile.text failed at offset 22. Near: "<h1>FinalDocument</h1><p>T<spanid="testingSuffix">esting</span>.</p><p>[nesentance.]{:#words}</p><p>Genesisisanadequateproduct.</p><p>Blahblagh.</p><p>Inlineword.<spanclass="class1">Idon&#39;twanttohavetorewritethis.</span>Fraufoofoo.<strongkey="value"foo="bar">ARELIEF</strong>.Haveyoueverseen<ahref="www.github.com">mywebsite?</a>?</p><p>IlikeitwhenIeatabananas<em>whilst</em>wearingasweater!</p><p><em>bananas</em>?Yes!</p><p>Remembertoaddnewlines,likeinthiscodesample:</p><preclass="whatevs"lang="javascript">console.log(<spanclass="string">"Justanotherexample..."</span>);</pre><p>Otherwise,itmightrunonandon:Onesentance.</p><p>Ihadaquestionabouttheseitems:</p><ul><li>Item1</li><li>Item2</li><li>Item3</li></ul><p>Finishedtesting!</p>".
+
+
+Got:
+<h1>
+  FinalDocument
+</h1>
+<p>
+  T<spanid="testingSuffix">esting</span>.
+</p>
+<p>
+  [nesentance.]{:#words}
+</p>
+<p>
+  Genesisisanadequateproduct.
+</p>
+<p>
+  Blahblagh.
+</p>
+<p>
+  Inlineword.<spanclass="class1">Idon&#39;twanttohavetorewritethis.</span>Fraufoofoo.<strongkey="value"foo="bar">ARELIEF</strong>.Haveyoueverseen<ahref="www.github.com">mywebsite?</a>?
+</p>
+<p>
+  IlikeitwhenIeatabananas<em>whilst</em>wearingasweater!
+</p>
+<p>
+  <em>bananas</em>?Yes!
+</p>
+<p>
+  Remembertoaddnewlines,likeinthiscodesample:
+</p>
+<preclass="whatevs"lang="javascript">
+  console.log(
+  <spanclass="string">
+    "Justanotherexample..."
+  </span>
+  );
+</pre>
+<p>
+  Otherwise,itmightrunonandon:Onesentance.
+</p>
+<p>
+  Ihadaquestionabouttheseitems:
+</p>
+<ul>
+  <li>Item1</li>
+  <li>Item2</li>
+  <li>Item3</li>
+</ul>
+<p>
+  Finishedtesting!
+</p>
+
+
+Expected:
+<h1>
+  FinalDocument
+</h1>
+T
+<spanid="testingSuffix">
+  esting
+</span>
+.
+<spanid="words">
+  Onesentance.
+</span>
+Genesisisanadequateproduct.Blahblagh.Inlineword.
+<spanclass="class1class2">
+  Idon'twanttohavetorewritethis.
+</span>
+Fraufoofoo.
+<strongkey="value"foo="bar">
+  ARELIEF**
+</strong>
+.Haveyoueverseen
+<ahref="www.github.com">
+  mywebsite?
+</a>
+?IlikeitwhenIeatabananas
+<em>
+  whilst
+</em>
+wearingasweater!
+<strong>
+  bananas
+</strong>
+?Yes!Remembertoaddnewlines,likeinthiscodesample:
+<preclass="javascriptwhatevs">
+  console.log("Justanotherexample...");
+</pre>
+Otherwise,itmightrunonandon:Onesentance.Ihadaquestionabouttheseitems:
+<ul>
+  <li>Item1</li>
+  <li>Item2</li>
+  <li>Item3</li>
+</ul>
+
+#15. long.text completed.
+#16. multiple_definitions.text completed.
+#17. multiple_terms.text completed.
+#18. tight.text completed.
+#19. multiple_lines.text completed.
+#20. atx.text completed.
+#21. atx_closing_hashes.text completed.
+#22. setext.text completed.
+#23. trailing_paras.text completed.
+#24. abutting_blocks.text completed.
+#25. dashes.text completed.
+#26. leading_spaces.text completed.
+#27. long_loose.text completed.
+#28. loose_dashes.text completed.
+#29. loose_stars.text completed.
+#30. loose_underscores.text completed.
+#31. stars.text completed.
+#32. underscores.text completed.
+#33. basic.text completed.
+#34. crotcheted_url.text completed.
+#35. crotcheted_url_with_title.text completed.
+#36. empty.text completed.
+#37. spaces_round_title.text completed.
+#38. title.text completed.
+#39. autolink_email.text completed.
+#40. autolink_in_code.text completed.
+#41. autolink_url.text completed.
+#42. case_insensitive.text completed.
+#43. implicit.text completed.
+#44. inline_with_newline.text completed.
+#45. inline_with_title.text completed.
+#46. missing_references.text completed.
+#47. parens_escaped_inline.text completed.
+#48. parens_inline.text completed.
+#49. parens_reference.text completed.
+#50. ref_reuse.text completed.
+#51. reference.text completed.
+#52. reference_with_space.text completed.
+#53. bullet_types.text completed.
+#54. hr_abutting.text completed.
+#55. hr_inside.text completed.
+#56. leading_whitespace.text completed.
+#57. loose.text completed.
+#58. loose_with_inline.text completed.
+#59. multiline_inline.text completed.
+#60. numeric.text completed.
+#61. attribute.text completed.
+#62. class.text completed.
+#63. code.text completed.
+#64. document.text completed.
+#65. id.text completed.
+#66. inner_whitespace.text completed.
+#67. list.text completed.
+#68. multiple_classes.text completed.
+#69. quoted.text completed.
+68/69 tests completed successfully.

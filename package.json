@@ -46,6 +46,7 @@
     "namp": "./bin/namp.js"
   },
   "dependencies": {
-    "highlight.js": "1.0.4",
+    "highlight.js": "~1.0.4",
+    "markdown_conrefs": "~1.1.2"
   }
 }
