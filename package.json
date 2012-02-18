@@ -2,7 +2,7 @@
   "name" : "namp",
   "version" : "0.1.0",
   "description" : "Markdown parser for Node, with Maruku, GFM, and PHP Extras support, plus more.",
-  "keywords" : [ "markdown", "text processing", "ast", "maruku", "gfm" ],
+  "keywords" : [ "markdown", "maruku", "gfm", "text processing", "ast" ],
   "maintainers" : [
     {
       "name" : "Garen J. Torikian"
@@ -22,7 +22,7 @@
     {
       "name" : "Kenneth Vestergaard",
       "email" : "kvs@binarysolutions.dk"
-    }
+    },
     {
       "name" : "Ben Truyman",
       "web" : "http://bentruyman.com"
@@ -34,7 +34,7 @@
   "licenses" : [
     {
       "type" : "GPL",
-      "http://github.com/gjtorikian/namp/raw/master/LICENSE"
+      "url": "http://github.com/gjtorikian/namp/raw/master/LICENSE"
     }
   ],
   "repository" : {
