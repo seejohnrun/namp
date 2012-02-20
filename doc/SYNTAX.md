@@ -220,7 +220,7 @@ Tip: This should be wrapped in a div that looks like this: `<div class='alert al
 
 Warning: And _this_ should be wrapped in a div like this: `<div class='alert alert-block'>`
 
-These classes have to do with Twitter Bootstrap stylings.
+These classes have to do with Twitter Bootstrap stylings for `Note: `, `Tip: `, and `Warning: `.
 
 ## INLINE HTML
 -----------------
