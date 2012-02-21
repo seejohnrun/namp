@@ -162,11 +162,6 @@ var bench = function() {
   });
 };
 
-var time = function() {
-  var marked = require('../');
-  main.bench('marked', marked);
-};
-
 var bench_load = function() {
   files = {};
  
@@ -292,8 +287,6 @@ var pretty = (function() {
 if (!module.parent) {
   if (~process.argv.indexOf('--bench')) {
     bench();
-  } else if (~process.argv.indexOf('--time')) {
-    time();
   } else {
     main();
   }
