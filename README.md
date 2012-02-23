@@ -18,6 +18,7 @@ Produces this text:
 Maruku only allowed you to do inline IDs for stylized text, like `code`, **strong**, or _emphasis_. Now, if you wrap your text in `[ ]` brackets, you can continue to add Maruku metadata syntax and expect it to work.
   
 * Strikethroughs, using `~~`. For example, `This is a ~~strikethrough~~` turns into `This is a <del>strikethrough</del>`
+* Tables, with support for `left`,`right`, and `center` alignment
 * Conversion of `Note: `, `Tip: `, and `Warning: ` blocks into [Twitter Bootstrap alert blocks](http://twitter.github.com/bootstrap/components.html#alerts). Awesome!
 * Build-time highlighting of `<pre>` code blocks. Enabled by default, see below for configuration instructions.
 

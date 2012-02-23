@@ -1,6 +1,6 @@
 {
   "name" : "namp",
-  "version" : "0.1.3",
+  "version" : "0.1.4",
   "description" : "Markdown parser for Node, with Maruku, GFM, and PHP Extras support, plus more.",
   "keywords" : [ "markdown", "maruku", "gfm", "text processing", "ast" ],
   "maintainers" : [

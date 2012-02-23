@@ -149,23 +149,31 @@ Violets are blue.
 
 - - - - - - - - - - - - - - - - - - - -
 
-## TABLES (todo)
+## TABLES (PHP Extras)
 -----------------
 
 |a |b |c
 |--|--|--
 |1 |2 |3
 
+
+|a |b |c
+|:--|:--:|:--
+|1 |2 |3
+|4 |5 | 6
+
 or
 
-a |b |c
+x |y        |z
 --|--|--
-1 |2 |3
+8 |9 |10
+
+{: .table .table-striped .table-bordered .table-condensed}
 
 alignment
 
   right|left  | center
------:|:-----|------
+-----:|:-----|:------:
  0001 | 2    | 003
    4  | 0005 |  6
 
@@ -190,6 +198,8 @@ Term 1
     hendrerit mi posuere lectus.
 :   Second definition for term 1, also wrapped in a paragraph
     because of the blank line preceding it.
+    
+{: #TestingIDHere}
 
 ## ATTRIBUTES (Maruku) {: #myid .myclass}
 -----------------
@@ -197,6 +207,7 @@ Term 1
 Look _around_{: .class1} you! View [the source code!]{: .someclass .someclass2 vague="no"}
 This whole area is covered in
 attributes!
+
 {: #bigBlock tutorial=yes}
 
 Spans should be covered in `[ ]`, with the attribute list defined afterwards.
