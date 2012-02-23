@@ -153,13 +153,13 @@ Violets are blue.
 -----------------
 
 |a |b |c
-|--|--|--
+|:---|---|---
 |1 |2 |3
 
 
 |a |b |c
 |:--|:--:|:--
-|1 |2 |3
+|1 |2 (or _two_) |[3]{: .threeClass}
 |4 |5 | 6
 
 or
@@ -174,7 +174,7 @@ alignment
 
   right|left  | center
 -----:|:-----|:------:
- 0001 | 2    | 003
+ 0001 | 2 (or _two_)    | 003
    4  | 0005 |  6
 
 ## DEFINITION LISTS (PHP Extras)
