@@ -16,10 +16,10 @@
 <hr></hr>
 
 <p>Inline:
-An <a href="http://url.com/" title="Title">example</a></p>
+An <a href=&#8220;http://url.com/&#8221; title=&#8220;Title&#8221;>example</a></p>
 
 <p>Reference-style labels (titles are optional):
-An <a href="/url/to/img.jpg" title="Obviously, no image">xample</a>. Then, anywhere<br />
+An <a href=&#8221;/url/to/img.jpg&#8221; title=&#8220;Obviously, no image&#8221;>xample</a>. Then, anywhere<br />
 else in the doc, define the link:</p>
 
 <h2>IMAGES</h2>
@@ -27,10 +27,10 @@ else in the doc, define the link:</p>
 <hr></hr>
 
 <p>Inline (titles are optional):
-<img alt="alt text" title="Obviously, no image" src="/path/img.jpg"></img></p>
+<img alt=&#8220;alt text&#8221; title=&#8220;Obviously, no image&#8221; src=&#8221;/path/img.jpg&#8221;></img></p>
 
 <p>Reference-style:
-<img_ref alt="alt text" ref="id" text="![alt text][id]"></img_ref></p>
+<img_ref alt=&#8220;alt text&#8221; ref=&#8220;id&#8221; text=&#8221;![alt text][id]&#8221;></img_ref></p>
 
 <h2>HEADERS</h2>
 
@@ -92,14 +92,14 @@ like <code> `this` </code>.</p>
 <pre>This <span class="keyword">is</span> a preformatted
 code <span class="keyword">block</span>.</pre>
 
-<p>Code tags can also be &quot;fenced&quot; by <code> </code><code></code> ` (GitHub-Flavored-Markdown)</p>
+<p>Code tags can also be &amp;#8220;fenced&amp;#8221; by <code> </code><code></code> ` (GitHub-Flavored-Markdown)</p>
 
-<pre>console<span class="preprocessor">.log</span>(<span class="string">"flock yeah!"</span>)<span class="comment">;</span></pre>
+<pre>console<span class=&#8220;preprocessor&#8221;>.log</span>(<span class=&#8220;string&#8221;>&#8220;flock yeah!&#8221;</span>)<span class=&#8220;comment&#8221;>;</span></pre>
 
 <p>For extra awesome, add the name of a programming language to the first fence, in order to syntax highlight it.</p>
 
-<pre class="perl" lang="perl">var <span class="keyword">x</span> = function () { 
-  console.<span class="keyword">log</span>(<span class="string">"This actually has 'perl' as a tag!"</span>)
+<pre class="perl" lang="perl">var <span class=&#8220;keyword&#8221;>x</span> = function () { 
+  console.<span class=&#8220;keyword&#8221;>log</span>(<span class=&#8220;string&#8221;>&#8220;This actually has 'perl' as a tag!&#8221;</span>)
 };</pre>
 
 <p>(Highlighting is enabled by default; you&#39;ll have to define your own CSS.)</p>
@@ -135,17 +135,17 @@ Violets are blue.</p>
 
 <hr></hr>
 
-<table><table><thead><tr><th>a </th><th>b </th><th>c</th></tr></thead><tr><td align="left">1 </td><td align="">2 </td><td align="">3</td></tr></table></table>
+<table><table><thead><tr><th>a </th><th>b </th><th>c</th></tr></thead><tr><td align=&#8220;left&#8221;>1 </td><td align=&#8221;&#8221;>2 </td><td align=&#8221;&#8221;>3</td></tr></table></table>
 
-<table><table><thead><tr><th>a </th><th>b </th><th>c</th></tr></thead><tr><td align="left">1 </td><td align="center">2 (or <em>two</em>) </td><td align="left"><span class="threeClass">3</span></td></tr><tr><td align="left">4 </td><td align="center">5 </td><td align="left"> 6</td></tr></table></table>
+<table><table><thead><tr><th>a </th><th>b </th><th>c</th></tr></thead><tr><td align=&#8220;left&#8221;>1 </td><td align=&#8220;center&#8221;>2 (or <em>two</em>) </td><td align=&#8220;left&#8221;><span class=&#8220;threeClass&#8221;>3</span></td></tr><tr><td align=&#8220;left&#8221;>4 </td><td align=&#8220;center&#8221;>5 </td><td align=&#8220;left&#8221;> 6</td></tr></table></table>
 
 <p>or</p>
 
-<table class="table table-striped table-bordered table-condensed"><thead><tr><th>x </th><th>y        </th><th>z</th></tr></thead><tr><td align="">8 </td><td align="">9 </td><td align="">10</td></tr></table>
+<table class="table table-striped table-bordered table-condensed"><thead><tr><th>x </th><th>y        </th><th>z</th></tr></thead><tr><td align=&#8221;&#8221;>8 </td><td align=&#8221;&#8221;>9 </td><td align=&#8221;&#8221;>10</td></tr></table>
 
 <p>alignment</p>
 
-<table><thead><tr><th>  right</th><th>left  </th><th> center</th></tr></thead><tr><td align="right"> 0001 </td><td align="left"> 2 (or <em>two</em>)    </td><td align="center"> 003</td></tr><tr><td align="right">   4  </td><td align="left"> 0005 </td><td align="center">  6</td></tr></table>
+<table><thead><tr><th>  right</th><th>left  </th><th> center</th></tr></thead><tr><td align=&#8220;right&#8221;> 0001 </td><td align=&#8220;left&#8221;> 2 (or <em>two</em>)    </td><td align=&#8220;center&#8221;> 003</td></tr><tr><td align=&#8220;right&#8221;>   4  </td><td align=&#8220;left&#8221;> 0005 </td><td align=&#8220;center&#8221;>  6</td></tr></table>
 
 <h2>DEFINITION LISTS (PHP Extras)</h2>
 
@@ -173,14 +173,14 @@ attributes!</p>
 
 <hr></hr>
 
-<p><a href="http://foo.com/">http://foo.com/</a><br />
-<a href="mailto:foo@bar.com">foo@bar.com</a></p>
+<p><a href=&#8220;http://foo.com/&#8221;>http://foo.com/</a><br />
+<a href=&#8220;mailto:foo@bar.com&#8221;>foo@bar.com</a></p>
 
 <h2>ENCODING</h2>
 
 <hr></hr>
 
-<p>&amp;amp; &lt; &quot;aaa&quot;</p>
+<p>&amp;amp; &lt; &amp;#8220;aaa&amp;#8220;</p>
 
 <h2>Boostrap tags</h2>
 
@@ -206,7 +206,7 @@ Regularly Markdown syntax ignored in HTML.<br/>
 [Google](http://www.google.co.jp/)
 </div>
 
-<div markdown="1">
-Markdown enabled inside HTML when marked by markdown="1" attribute.  
+<div markdown=&#8220;1&#8221;>
+Markdown enabled inside HTML when marked by markdown=&#8220;1&#8221; attribute.  
 [Google](http://www.google.co.jp/)
 </div>

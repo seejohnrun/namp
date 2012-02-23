@@ -149,6 +149,17 @@ Violets are blue.
 
 - - - - - - - - - - - - - - - - - - - -
 
+## PUNCTUATION 
+
+"check it out"
+"
+
+\"
+
+`"should not curl"`
+
+*"Wow"*
+
 ## TABLES (PHP Extras)
 -----------------
 
